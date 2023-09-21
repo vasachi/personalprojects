@@ -1,0 +1,45 @@
+import requests
+
+# Set your M-Pesa credentials
+# provided by safaricom
+consumer_key = "YOUR_CONSUMER_KEY"
+consumer_secret = "YOUR_CONSUMER_SECRET"
+access_token = "YOUR_ACCESS_TOKEN"
+access_token_secret = "YOUR_ACCESS_TOKEN_SECRET"
+
+# Set the M-Pesa API endpoint
+api_endpoint = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
+
+# Set the B2B M-Pesa payment details
+business_short_code = "YOUR_BUSINESS_SHORT_CODE"
+till_number = "YOUR_TILL_NUMBER"
+amount = 100
+party_a = "6222172334"
+party_b = "6222172335"
+remarks = "B2B payment"
+
+# Prepare the M-Pesa API request
+headers = {
+    "Authorization": "Bearer %s" % access_token,
+    "Content-Type": "application/json"
+}
+body = {
+    "BusinessShortCode": business_short_code,
+    "TillNumber": till_number,
+    "Amount": amount,
+    "PartyA": party_a,
+    "PartyB": party_b,
+    "Remarks": remarks
+}
+
+# Send the M-Pesa API request and get the response
+response = requests.post(api_endpoint, headers=headers, json=body)
+
+# Check the M-Pesa API response status code
+if response.status_code == 200:
+    # The payment was successful
+    print("Payment successful!")
+else:
+    # The payment failed
+    print("Payment failed!")
+    print(response.content)
