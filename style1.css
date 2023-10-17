@@ -1,0 +1,51 @@
+
+h1
+{
+color: blue;
+background: brown;
+text-align:center;
+}
+h2
+{
+color:green;
+background:pink;
+text-align:center;
+}
+.p1
+{
+color:orange;
+background:red;
+text-align:left;
+font-family:Times Newroman;
+width:30%;
+}
+.p2
+{
+color:pink;
+background:blue;
+text-align:left;
+font-family:comic sans;
+width:60%;
+}
+.p3
+{
+color:white;
+background:black;
+text-align:left;
+font-family:calibri;
+width:90%;
+}
+footer
+{
+color: red;
+backround-color:blue;
+text-align:center;
+height:5px;
+width:100%;
+}
+img 
+{
+border-radius: 20%;
+height:50px;
+width:60px;
+}

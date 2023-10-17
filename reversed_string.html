@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse String</title>
+</head>
+<body>
+  <h1>Reverse String</h1>
+
+  <script>
+    function reverseString(str) {
+      var reversedString = "";
+      for (var i = str.length - 1; i >= 0; i--) {
+        reversedString += str[i];
+      }
+      return reversedString;
+    }
+
+    // Get the characters to be reversed from the user.
+    var str = prompt("Enter a string to reverse:");
+
+    // Reverse the string.
+    var reversedString = reverseString(str);
+
+    // Display the reversed string.
+    document.write("The reversed string is: " + reversedString);
+  </script>
+</body>
+</html>

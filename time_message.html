@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let hour = parseInt(prompt("Enter the hour of day (0-23)"));
+      let greeting = "";
+      if (hour >= 0 && hour < 12) {
+        greeting = "Good morning!";
+      } else if (hour >= 12 && hour < 18) {
+        greeting = "Good afternoon!";
+      } else if (hour >= 18 && hour < 24) {
+        greeting = "Good evening!";
+      } else {
+        greeting = "Invalid hour entered!";
+      }
+      alert(greeting);
+    </script>
+  </body>
+</html>

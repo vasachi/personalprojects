@@ -1,0 +1,38 @@
+<html>
+<head>
+<title></title>
+<script>
+function myfunction()
+{
+var un=document.forms["myform"]["uname"].value;
+var pw=document.forms["myform"]["pass"].value;
+if(un=="admin1" && pw=="shivachi")
+{
+//window.location.href="databasesystemmenu.php";
+alert("correct password")
+}
+
+else
+{
+alert("invalid username and password");
+}
+}
+</script>
+</head>
+<body>
+<div class="div1">
+<form name="myform" method="post">
+<label>USERNAME👤 </label> 
+     
+<input type="text" name="uname" class="inputtext" placeholder="username">
+<br><br>
+<label>PASSWORD🗝 </label>
+
+<input type="password" name="pass" class="inputtext" placeholder="password">
+<br><br>
+<input type="button" name="log" id="logButton" value="LOGIN" onclick="myfunction()">
+<input type="reset" value="RESET">
+
+</form>
+</body>
+</html>

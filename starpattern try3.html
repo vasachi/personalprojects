@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1 id="demo"></h1>
+
+<script>
+var star = "*";
+
+for (var i = 7; i >= 1; i--) {
+  for (var j = 1; j <= i; j++) {
+    star += "*";
+  }
+  star += "<br>";
+}
+
+document.getElementById("demo").innerHTML = star;
+</script>
+
+</body>
+</html>

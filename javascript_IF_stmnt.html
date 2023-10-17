@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>house rent</title>
+<script>
+function house()
+{
+var rent=document.forms["myform"]["rent"].value;
+if(rent>5000 && rent<10000)
+{
+alert("one bedroom house");
+}
+else if(rent>10000 && rent<15000)
+{
+alert("two bedroom house");
+}
+else if(rent>15000 && rent<20000)
+{
+alert("three bedroom house");
+}
+else
+{
+alert("no allocation for that amount");
+}
+}
+</script>
+</head>
+<body align="center">
+<form name="myform">
+<label><b>Enter Amount</b></label><br>
+<input type="text" name="rent"><br><br>
+<input type="button" value="select" onclick="house()">
+</form>
+</body>
+</html>

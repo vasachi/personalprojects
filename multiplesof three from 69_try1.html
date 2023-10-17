@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the multiples of 3 starting from 69.</p>
+
+<button onclick="displayMultiples()">Display Multiples</button>
+
+<p id="multiples"></p>
+
+<script>
+function displayMultiples() {
+  var i = 69;
+  var text = "";
+  while (i % 3 == 0) {
+    text += i + "<br>";
+    i += 3;
+  }
+  document.getElementById("multiples").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

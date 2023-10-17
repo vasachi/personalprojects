@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<script type="text/javascript">
+		var attempts = 3;
+		function validate(){
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if ( username == "admin" && password == "password"){
+				alert ("Login successfully");
+				window.location = "success.html"; // Redirecting to other page.
+				return false;
+			}
+			else{
+				attempts --;// Decrementing by one.
+				alert("You have left "+attempts+" attempt;");
+				// Disabling fields after 3 attempts.
+				if( attempts == 0){
+					document.getElementById("username").disabled = true;
+					document.getElementById("password").disabled = true;
+					document.getElementById("submit").disabled = true;
+					document.body.style.backgroundColor = "blue";
+					return false;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<label>Username :</label>
+		<input type="text" id="username" name="username"/><br /><br />
+		<label>Password :</label>
+		<input type="password" id="password" name="password"/><br/><br />
+		<input type="button" value="Login" onclick="validate()"/>
+	</div>
+</body>
+</html>
+
