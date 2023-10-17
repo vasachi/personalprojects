@@ -1,0 +1,78 @@
+<html>
+<head>
+  <title></title>
+  <style>
+    header{
+      color: goldenrod;
+      background: lightskyblue;
+      text-align: center;
+      height: 50px;
+      width: 100%;
+    }
+    
+
+    .one{
+      background: lightcyan;
+      height: 500px;
+      width: 60%;
+      float: left;
+    }
+    #slide{
+    width: 500px;
+    height: 500px;
+    overflow: visible;
+  }
+  #slide img{
+    width: 160%;
+    height: 500px;
+
+  }
+       .two{
+         background: blueviolet;
+         height: 500px;
+         width: 40%;
+         float: right;
+       }
+      .two button{
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: magenta;
+      color: gold;
+    
+      }
+
+    footer{
+      color: goldenrod;
+      background: red;
+      text-align: center;
+      height: 50px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<header>FASHION DOCTOR</header>
+<div class="one">
+  <div id="slide">
+    <img src="https://cdn.hswstatic.com/gif/computer-networking-5-1.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GwY4ejWID3BOyuYZFpLQa746bRb6eoSMmQ&usqp=CAU">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqWjJXNME412aFG2BCra3h9AsV5myc3_t61g&usqp=CAU">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbUywi_evhpZia8bxnXRWKrqeu8CXWZqzA&usqp=CAU">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSr2wGVW4g7jdPzKI5stV-IXf109Qq1vDJAg&usqp=CAU">  
+    
+  </div>
+</div>
+<div class="two">
+  <button onclick="changeBackgroundColor()">Click me to change background</button>
+  <script type="text/javascript">
+    function changeBackgroundColor() {
+      const Colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'cyan', 'orange'];
+      const randomColor = Colors[Math.floor(Math.random() * Colors.length)]; 
+      document.body.style.backgroundColor = randomColor; 
+    }
+  </script>
+</div>
+</body>
+<footer>&COPY FAHIONDOCTOR @2023</footer>
+</html>

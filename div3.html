@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        header {
+            color: goldenrod;
+            background: lightskyblue;
+            text-align: center;
+            height: 50px;
+            width: 100%;
+        }
+
+        .one {
+            background: lightcyan;
+            height: 500px;
+            width: 60%;
+            float: left;
+            overflow: hidden; /* Ensure the images are hidden when moving */
+        }
+
+        #slide {
+            width: 500%; /* Make the width larger to accommodate all images */
+            height: 500px;
+            animation: slideImages 10s linear infinite; /* Add animation for auto-moving images */
+        }
+
+        #slide img {
+            width: 20%; /* Set each image's width */
+            height: auto;
+            float: left; /* Float the images left to create a horizontal row */
+        }
+
+        .two {
+            background: blueviolet;
+            height: 500px;
+            width: 40%;
+            float: right;
+        }
+
+        .two button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: magenta;
+            color: gold;
+        }
+
+        footer {
+            color: goldenrod;
+            background: blue; /* Change footer background color to blue */
+            text-align: center;
+            height: 50px;
+            width: 100%;
+            clear: both; /* Clear floats to ensure footer placement */
+        }
+
+        @keyframes slideImages {
+            0% {
+                margin-left: 0;
+            }
+            100% {
+                margin-left: -400%; /* Move all images to the left */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>FASHION DOCTOR</header>
+<div class="one">
+    <div id="slide">
+        <img src="https://cdn.hswstatic.com/gif/computer-networking-5-1.jpg">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GwY4ejWID3BOyuYZFpLQa746bRb6eoSMmQ&usqp=CAU">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqWjJXNME412aFG2BCra3h9AsV5myc3_t61g&usqp=CAU">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbUywi_evhpZia8bxnXRWKrqeu8CXWZqzA&usqp=CAU">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSr2wGVW4g7jdPzKI5stV-IXf109Qq1vDJAg&usqp=CAU">
+    </div>
+</div>
+<div class="two">
+    <button onclick="changeBackgroundColor()">Click me to change background</button>
+    <script type="text/javascript">
+        function changeBackgroundColor() {
+            const Colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'cyan', 'orange'];
+            const randomColor = Colors[Math.floor(Math.random() * Colors.length)];
+            document.querySelector('.two').style.backgroundColor = randomColor;
+        }
+    </script>
+</div>
+<footer>&COPY; FASHIONDOCTOR @2023</footer>
+</body>
+</html>

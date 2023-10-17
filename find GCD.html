@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find the Greatest Common Divisor of Two Numbers</title>
+</head>
+<body>
+  <h1>Find the Greatest Common Divisor of Two Numbers</h1>
+
+  <script>
+    function gcd(a, b) {
+      if (b === 0) {
+        return a;
+      } else {
+        return gcd(b, a % b);
+      }
+    }
+
+    // Get the numbers from the user.
+    var num1 = prompt("Enter the first number:");
+    var num2 = prompt("Enter the second number:");
+
+    // Find the GCD of the numbers.
+    var gcdNum = gcd(num1, num2);
+
+    // Display the result.
+    document.write("The GCD of " + num1 + " and " + num2 + " is " + gcdNum);
+  </script>
+</body>
+</html>

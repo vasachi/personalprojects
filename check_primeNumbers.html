@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check if a Number is Prime</title>
+</head>
+<body>
+  <h1>Check if a Number is Prime</h1>
+
+  <script>
+    function isPrime(num) {
+      // Check if the number is less than or equal to 1.
+      if (num <= 1) {
+        return false;
+      }
+
+      // Check if the number is divisible by any number between 2 and its square root.
+      for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+
+      // If the number is not divisible by any number between 2 and its square root, it is a prime number.
+      return true;
+    }
+
+    // Get the number to check from the user.
+    var num = prompt("Enter a number to check:");
+
+    // Cap the number to a maximum of 100.
+    if (num > 100) {
+      num = 100;
+    }
+
+    // Check if the number is prime.
+    var isPrimeNum = isPrime(num);
+
+    // Display the result.
+    document.write(num + " is " + (isPrimeNum ? "a prime number" : "not a prime number"));
+  </script>
+</body>
+</html>

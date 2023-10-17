@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>css and JS</title>
+<style>
+body
+{
+font family: Cooper;
+height:500px;
+align items: center;
+}
+button.ibp1 
+{
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 150px;
+background-color: pink;
+color: blue;
+margin: 0 auto;
+display:flex;
+justify-content: center;
+}
+
+button.ibp 
+{
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 150px;
+background-color: green;
+color: yellow;
+margin: 0 auto;
+display:flex;
+justify-content: center;
+}
+header
+{
+padding:20px;
+background-color: yellow;
+text-align:center;
+position: fixed;
+transition: all 0.5s ease-in-out;
+}
+header.hidden {
+  top: -50px;
+}
+
+p
+{
+margin-top:30px;
+font-family: comic sans;
+font-size: 24;
+color:black;
+background-color:pink;
+text-align:"center";
+padding-top: 10px;
+
+}
+#slideimg
+{
+width:1200px;
+height:800px;
+overflow:hidden;
+}
+#slideimg
+{
+width:500px;
+height:300px;
+
+}
+#slideimg 
+{
+overflow: auto;
+width: 1200px;
+height: 800px;
+}
+
+
+</style>
+</head>
+<body>
+<script>
+function changebgcolor()
+{
+  const colors = ["green", "yellow", "blue", "purple", "cyan", "orange"];
+  const random = Math.floor(Math.random() * colors.length);
+  document.body.style.background = colors[random];
+}
+function ibp()
+{
+alert("shivachi is a Genious");
+}
+
+</script>
+
+<header class="header">INTERNET BASED PROGRAMING</header>
+
+
+
+<p class="p">Shivachi is the greatest, he works hard and is the best of the best. 
+He likes coding the web at his free time.
+ A website refers to a collectin of related web pages, linked together.
+ to get to another page from the home page we can use
+markup attributes to traverse all pages in a single website.
+
+A website is supposed to provide a good display to its visitors and a user friendly
+environment with an absolute attractivity. To come up with a website
+Students require various tools and frameworks. Such toos include
+html,which is responsible for creating structure and content of the web.
+Another essential framework is CSS which is responsible for presentatin
+and apperance. JavaScript is a client side scripting language of the web
+responsible for bringing interactivity into the web</p>
+
+<div>
+<button class="ibp1" onclick="changebgcolor()">click to change background</button>
+</div>
+<br>
+
+<div>
+<button class="ibp" onclick="ibp()">explore css</button>
+</div>
+
+<div id="#slideimg"  style="overflow: hidden;">
+<img src="turkeymeat.jpg">
+<img src="nyslogo.jpg">
+<img src="turkeymeat.jpg">
+<img src="nyslogo.jpg">
+<img src="turkeymeat.jpg">
+</div>
+<script>
+//slide functionality
+let current= 0;
+let images= document.querySelector("#slideimg");
+images[current].style.display="block";
+
+setInterval(function()
+{
+images[current].style.display="none";
+current=(current+1) % images.length;
+images[current].style.display="block";
+},2000);
+
+
+setInterval(function() {
+  var header = document.querySelector('header');
+  header.classList.toggle('hidden');
+}, 5000);
+
+
+</script>
+</body>
+</html>
