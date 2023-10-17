@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>ONE</title>
+<style>
+body
+ {
+  font-family: Times Newroman;
+ }
+
+.container 
+ {
+  width: 500px;
+  margin: 0 auto;
+ }
+
+.data-attribute 
+ {
+  margin-bottom: 10px;
+  text:bold;
+ }
+.picture-frame 
+ {
+      border: 1px solid black;
+      padding: 10px;
+ }
+
+    .picture-frame img
+ {
+      max-width: 100%;
+ }
+
+    .picture-frame img::after 
+ {
+      content: attr(alt);
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 12px;
+      color: gray;
+ }
+   .text-box
+ {
+     overflow-y:scroll;
+  }
+    .iframe 
+  {
+      border: 5px solid black;
+      width: 50%;
+      height: 50%;
+      float: left;
+  }
+</style>
+</head>
+<body>
+<fieldset>
+
+<h1>Feedback Form</h1>
+<p>Please fill out this form to help us improve our site.</p>
+
+
+<div class="data-attribute">
+<label>Name:</label>     <input type="text">
+</div>
+
+
+<label>Comments:</label>   
+<div class="text-box">
+<textarea name="Textarea" cols=10 rows=2 >this is the story of a young man who grew up in the himilayas.</textarea>
+</div>
+
+<div class="data-attribute">
+<label>Email Address:</label>    <input type="text">
+</div>
+
+<h5>Things you liked:</h5>
+<div class="data-attribute">
+<div class="data-attribute">
+<label>Site design</label>      <input type="checkbox" name="site">
+<label>Links</label>            <input type="checkbox" name="links">
+<label>Ease of use</label>      <input type="checkbox" name="EOU">
+<label>Images</label>           <input type="checkbox" name="images">
+<label>Source code</label>      <input type="checkbox" name="code">
+</div>
+
+<div class="data-attribute">
+<input type="Submit" value="Submit Your Entries">
+
+<input type="reset" value="Clear Your Entries">
+</div>
+</fieldset>
+
+</body>
+</html>

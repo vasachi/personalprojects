@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>IBS-STUDENT ADMISSION FORM</title>
+<script>
+let form = document.getElementById("myForm");
+form.onsubmit = function sbmt() {
+  alert("Form submitted!");
+};
+</script>
+
+</head>
+<body bgcolor="badge" text="black">
+
+<header align="center"><img src="nyslogo.jpg"><br><b><u><h1> NATIONAL YOUTH SERVICE<br>INSTITUTE OF BUSINESS STUDIES.</b></u></h1></header>
+
+<form name="admission" align="center">
+<h3>STUDENT ADMISSION FORM</h3>
+
+<fieldset>
+<legend align="left">PERSONAL INFORMATION</legend>
+<div>
+<label>SERVICE NUMBER</label>   <input type="text" id="s_num" name="s_num" maxlength="6" required>
+</div>
+<br>
+
+<div>
+<label>FIRST NAME</label>       <input type="text" id="f_name" name="f_name" required>
+</div>
+<br>
+
+<div>
+<label>SUR NAME</label>         <input type="text" id="s_name" name="s_name" required>
+</div>
+<br>
+
+<div>
+<label>DATE OF BIRTH</label>   <input type="date" id="dob" name="dob" required>
+</div>
+<br>
+
+<div>
+<label>GENDER</label><br>
+<label>MALE</label>             <input type="radio" name="gender" value="male">
+
+<br>
+<label>FEMALE </label>          <input type="radio" name="gender" value="female">
+</div>
+<br>
+
+<div>
+<label>PHONE NUMBER</label>           <input type="text" id="phone" name="phone" required>
+</div>
+<br>
+</fieldset><br>
+
+<fieldset>
+<legend align="left">ACADEMIC INFORMATION</legend>
+<div>
+<label>KCSE MEAN GRADE</label>           <input type="text" id="KCSE" name="KCSE" required>
+</div>
+<br>
+
+<div>
+<label>ENGLISH</label>           <input type="text" id="ENGLISH" name="ENGLISH" required>
+</div>
+<br>
+
+<div>
+<label>KISWAHILI</label>           <input type="text" id="KISWAHILI" name="KISWAHILI" required>
+</div>
+<br>
+
+<div>
+<label>MATHEMATICS</label>           <input type="text" id="MATHS" name="MATHS" required>
+</div>
+<br>
+
+<div>
+<label>COURSE</label>           <input type="text" id="course" name="course" required>
+</div>
+<br>
+
+<div>
+<label>DEPARTMENT</label>       
+
+<select id="departments" name="departments">
+<option value="ACCOUNTS">ACCOUNTS</option>
+<option value="INFORMATION COMMUNICATION TECHNOLOGY" selected>INFORMATION COMMUNICATION TECHNOLOGY</option>
+<option value="BUSINESS MANAGEMENT">BUSINESS MANAGEMENT</option>
+<option value="SECRETARIAL">SECRETARIAL</option>
+<option value="SUPPLY CHAIN MANAGEMENT">SUPPLY CHAIN MANAGEMENT</option>
+</select>
+</fieldset><br>
+
+<fieldset>
+<legend align="left">NEXT OF KIN DETAILS</legend>
+<div>
+<label>FULL NAME</label>           <input type="text" id="NOK" name="NOK" required>
+</div>
+<br>
+
+<div>
+<label>PHONE NUMBER</label>           <input type="text" id="nokphone" name="nokphone" required>
+</div>
+<br>
+
+<div>
+<label>COUNTY OF RESIDENCE</label>           <input type="text" id="county" name="county" required>
+
+</div>
+<br>
+</fieldset><br>
+
+<div>
+<label><b><u>I HAVE READ ALL THE RULES AND REGULATIONS OF THE COLLEGE</label></b></u>   <input type="checkbox" id="rules" name="rules" checked">
+</div>
+<br>
+
+<input type="submit" value="SUBMIT" onclick="sbmt()">
+
+</form>
+</body>

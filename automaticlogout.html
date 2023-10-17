@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Logout</title>
+  <script>
+    let timeout;
+    function resetTimer() {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        // logout user
+      }, 60000);
+    }
+
+    document.addEventListener('mousemove', resetTimer);
+    document.addEventListener('mousedown', resetTimer);
+    document.addEventListener('keypress', resetTimer);
+    document.addEventListener('touchmove', resetTimer);
+    document.addEventListener('onscroll', resetTimer);
+  </script>
+</head>
+<body>
+  <form>
+    <!-- form fields go here -->
+  </form>
+</body>
+</html>
